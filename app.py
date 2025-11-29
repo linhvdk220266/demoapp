@@ -22,4 +22,3 @@ with tabs[3]:
 
 with tabs[4]:
     tests.render()
-
