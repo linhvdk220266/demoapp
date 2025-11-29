@@ -6,7 +6,7 @@ st.set_page_config(page_title="Deepfake Detection App", layout="wide")
 inject_style()
 
 # ===== Top Navigation (Tabs) =====
-tabs = st.tabs(["Home", "Dataset", "Pre-Processing", "Models", "Test Your Image"])
+tabs = st.tabs(["Home", "Data Exploration", "Feature Extraction", "Models", "Test Your Image"])
 
 with tabs[0]:
     home.render()
