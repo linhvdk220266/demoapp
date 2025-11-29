@@ -189,6 +189,26 @@ def render():
     # ---------------------------------------------------------
     with tab3:
         st.subheader("Part 3 – Real vs Fake Feature Analysis")
+        
+        img_path_4 = os.path.join(root, "imgs", "PRNU_real.png")
+        img4 = Image.open(img_path_4)
+        img_path_5 = os.path.join(root, "imgs", "PRNU_fake.png")
+        img5 = Image.open(img_path_5)
+        
+        img_path_6 = os.path.join(root, "imgs", "LBP_real.png")
+        img6 = Image.open(img_path_6)
+        img_path_7 = os.path.join(root, "imgs", "LBP_fake.png")
+        img7 = Image.open(img_path_7)
+
+        img_path_8 = os.path.join(root, "imgs", "DCT_real.png")
+        img8 = Image.open(img_path_8)
+        img_path_9 = os.path.join(root, "imgs", "DCT_fake.png")
+        img9 = Image.open(img_path_9)
+        
+        img_path_10 = os.path.join(root, "imgs", "FFT_real.png")
+        img10 = Image.open(img_path_10)
+        img_path_11 = os.path.join(root, "imgs", "FFT_fake.png")
+        img11 = Image.open(img_path_11)
 
         st.markdown("""
         #### PRNU Analysis 
@@ -204,11 +224,11 @@ def render():
 
         with col1:
             st.markdown("##### Real Image PRNU")
-            st.image("imgs/prnu_real.png", caption="Real Images — PRNU Noise Maps", use_column_width=True)
+            st.image(img4, use_column_width=True, caption="Real Images — PRNU Noise Maps")
 
         with col2:
             st.markdown("##### Fake Image PRNU")
-            st.image("imgs/prnu_fake.png", caption="Fake Images — PRNU Noise Maps", use_column_width=True)
+            st.image(img5, use_column_width=True, caption="Fake Images — PRNU Noise Maps")
 
         # Bullet point differences
         st.markdown("**Key Differences Between Real and Fake PRNU**")
@@ -252,11 +272,11 @@ def render():
 
         with col1:
             st.markdown("##### Real Image LBP")
-            st.image("imgs/LBP_real.png", caption="Real Images — LBP Texture Maps", use_column_width=True)
+            st.image(img6, use_column_width=True, caption="Real Images — LBP Noise Maps")
 
         with col2:
             st.markdown("##### Fake Image LBP")
-            st.image("imgs/LBP_fake.png", caption="Fake Images — LBP Texture Maps", use_column_width=True)
+            st.image(img7, use_column_width=True, caption="Fake Images — LBP Texture Maps")
 
         # --- Bullet point differences ---
         st.markdown("**Key Differences Between Real and Fake LBP**")
@@ -294,11 +314,11 @@ def render():
 
         with col1:
             st.markdown("##### Real Image DCT")
-            st.image("imgs/dct_real.png", caption="Real Images — DCT Spectrum & Radial Frequency", use_column_width=True)
+            st.image(img8, use_column_width=True, caption="Real Images — DCT Spectrum & Radial Frequency")
 
         with col2:
             st.markdown("##### Fake Image DCT")
-            st.image("imgs/dct_fake.png", caption="Fake Images — DCT Spectrum & Radial Frequency", use_column_width=True)
+            st.image(img9, use_column_width=True, caption="Fake Images — DCT Spectrum & Radial Frequency")
 
         # Bullet point differences
         st.markdown("**Key Differences Between Real and Fake DCT Patterns**")
@@ -335,11 +355,11 @@ def render():
 
         with col1:
             st.markdown("##### Real Image FFT")
-            st.image("imgs/FFT_real.png", caption="Real Images — FFT Spectrum & Radial Plot", use_column_width=True)
+            st.image(img10, use_column_width=True, caption="Real Images — FFT Spectrum & Radial Plot")
 
         with col2:
             st.markdown("##### Fake Image FFT")
-            st.image("imgs/FFT_fake.png", caption="Fake Images — FFT Spectrum & Radial Plot", use_column_width=True)
+            st.image(img11, use_column_width=True, caption="Fake Images — FFT Spectrum & Radial Plot")
 
         # Bullet point differences
         st.markdown("**Key Differences Between Real and Fake FFT Patterns**")
